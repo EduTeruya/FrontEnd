@@ -1,6 +1,7 @@
 :root {
-    --primary-theme-color: #20232a95;
-    --secondary-theme-color: #282c34;
+    --primary-theme-color: #20232a;
+    --primary-shadow-color: #20232abf;
+    --secondary-shadow-color: #282c34;
     --primary-text-color: #fff;
     --primary-highlight-color: #61dafb;
     --primary-font-family: monospace;
@@ -9,30 +10,20 @@
 
 
 .body {
-    background-color: var(--primary-theme-color);
+    background-color: var(--primary-shadow-color);
     color: var(--primary-text-color);
     font-family: var(--primary-font-family);
     margin: 0;
-}
-
-.element {
-    display: flex;
 }
 
 .hero {
     background-image: url(https://i.postimg.cc/Qd3BYZBC/React.png);
     background-position: center;
     background-size: cover;
-    width: 100%;
     min-height: 100vh;
-/* 
-    display: flex;
-    align-items: center;
-    justify-content: center; */
 }
 
 .card {
-    background-color: var(--primary-theme-color);
     border: 0.125rem solid var(--primary-highlight-color);
     border-radius: 1rem;
     max-width: 320px;
@@ -40,6 +31,16 @@
     overflow: hidden;
 }
 
-.menu {
-    display: flex;
+.card__header {
+    background-color: var(--primary-shadow-color);
+    text-align: center;
+    padding: 1rem;
 }
+
+.card__img {
+    background-color: var(--primary-theme-color);
+    border-radius: 50%;
+    width: min(100%, 256px);
+    object-fit: cover;
+}
+
