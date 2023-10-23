@@ -1,0 +1,21 @@
+.container {
+    /* ancho maximo */
+    max-width: var(--max-width-container);
+    /* margin 0 hacia arriba y abajo y automatico a los lados */
+    margin: 0 auto;
+    /* pading izquierda y derecha segun la varible */
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+}
+
+.f-elements {
+    /* pone los elementos de forma lineal */
+    display: flex;
+}
+
+.f-elements--header {
+    /* alinea los elementos al centro */
+    align-items: center;
+    /* hace que se justifiquen como en word y se organizen  */
+    justify-content: space-between;
+}
