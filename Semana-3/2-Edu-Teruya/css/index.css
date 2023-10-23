@@ -1,8 +1,9 @@
 @import './modules/variables.css';
 @import './modules/header.css';
 @import './modules/layout.css';
-@import './modules/menu.css';
+@import './modules/list.css';
 @import './modules/nav.css';
+@import './modules/utils.css';
 
 .body {
     /* color de fondo */
