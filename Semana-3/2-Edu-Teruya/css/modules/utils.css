@@ -14,3 +14,7 @@
     gap: calc(var(--padding-section)*1);
     flex-wrap: wrap;
 }
+
+.f-direction-column {
+    flex-direction: column;
+}

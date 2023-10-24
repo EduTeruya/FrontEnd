@@ -1,7 +1,12 @@
 .nav {
     /* hace q se mantenga la posision de la barra mientras se desliza el scroll */
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    --translate-list-header: 100%;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.nav:target {
+    --translate-list-header: 0;
 }
 
 .nav__logo {

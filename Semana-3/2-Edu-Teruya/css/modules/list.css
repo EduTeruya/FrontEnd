@@ -5,6 +5,17 @@
     padding: 0;
 }
 
+.list--header {
+    position: fixed;
+    top: 4.65rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4.65rem);
+    background-color: var(--secondary-theme-color);
+    transform: translateX(var(--translate-list-header));
+    transition: transform 0.5s;
+}   
+
 .list__link {
     position: relative;
     color: var(--primary-text-color);

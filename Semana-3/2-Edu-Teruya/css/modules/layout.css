@@ -3,7 +3,7 @@
     max-width: var(--max-width-container);
     /* margin 0 hacia arriba y abajo y automatico a los lados */
     margin: 0 auto;
-    /* pading izquierda y derecha segun la varible */
+    /* padding izquierda y derecha segun la varible */
     padding-left: var(--padding-container);
     padding-right: var(--padding-container);
 }
@@ -18,4 +18,9 @@
     align-items: center;
     /* hace que se justifiquen como en word y se organizen  */
     justify-content: space-between;
+}
+
+.f-elements--center {
+    align-items: center;
+    justify-content: center;
 }
