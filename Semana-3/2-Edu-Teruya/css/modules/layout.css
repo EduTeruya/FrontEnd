@@ -1,3 +1,16 @@
+.section {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+.section--hero {
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url('https://i.postimg.cc/wBNhr8v0/fondo.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 .container {
     /* ancho maximo */
     max-width: var(--max-width-container);
@@ -23,4 +36,14 @@
 .f-elements--center {
     align-items: center;
     justify-content: center;
+}
+
+.f-elements--responsive {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .f-elements--responsive {
+        flex-direction: row;
+    }
 }
