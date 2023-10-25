@@ -1,0 +1,88 @@
+.section {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+.section--hero {
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    /* ancho maximo */
+    max-width: var(--max-width-container);
+    /* margin 0 hacia arriba y abajo y automatico a los lados */
+    margin: 0 auto;
+    /* padding izquierda y derecha segun la varible */
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+}
+
+.f-elements {
+    /* pone los elementos de forma lineal */
+    display: flex;
+}
+
+.f-elements--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.section__name {
+    display: flex;
+    font-size: 4rem;
+    text-decoration: none;
+    animation: zoom 1s ease-in-out 0s infinite alternate;
+}
+
+.section__letter {
+    position: relative;
+    transition: filter 1s ease-in-out;
+}
+
+.section__letter:hover {
+    filter:  brightness(2.5);
+}
+
+
+.section__letter:nth-child(1) {
+    color: var(--letter-color-1);
+}
+
+.section__letter:nth-child(2) {
+    color: var(--letter-color-2);
+}
+
+.section__letter:nth-child(3) {
+    color: var(--letter-color-3);
+}
+
+.section__letter:nth-child(4) {
+    color: var(--letter-color-4);
+}
+
+.section__letter:nth-child(5) {
+    color: var(--letter-color-5);
+}
+
+.section__letter:nth-child(6) {
+    color: var(--letter-color-6);
+}
+
+.section__letter::before {
+    content: var(--letter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter:blur(0.25rem);
+    transform: scale(1.125);
+}
+
+.section__letter::after {
+    content: var(--letter);
+    position: absolute;
+    left: 0;
+    top: 87.5%;
+    filter:blur(0.125rem);
+    transform: rotateX(137.5deg);
+}

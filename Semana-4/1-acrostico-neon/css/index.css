@@ -1,11 +1,11 @@
 @import './modules/variables.css';
-@import './modules/hero.css';
+@import './modules/layout.css';
 @import './modules/animations.css';
 
 
 .body {
     background-image: linear-gradient(var(--primary-theme-color), var(--secondary-theme-color));
     color: var(--primary-text-color);
-    font-family: serif;
+    font-family: var(--primary-font-color);
     margin: 0;
 }
