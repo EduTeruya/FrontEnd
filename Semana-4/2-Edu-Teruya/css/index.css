@@ -1,0 +1,17 @@
+@import './modules/variables.css';
+@import './modules/header.css';
+@import './modules/layout.css';
+@import './modules/list.css';
+@import './modules/nav.css';
+@import './modules/utils.css';
+
+.body {
+    /* color de fondo */
+    background-color: var(--primary-theme-color);
+    /* color de letras */
+    color: var(--primary-text-color);
+    /* tipo de letra */
+    font-family: var(--primary-font-family);
+    /* espacio respecto al borde de la pagina */
+    margin: 0;
+}

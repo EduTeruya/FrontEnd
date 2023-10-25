@@ -1,0 +1,34 @@
+.gap-sm {
+    gap: calc(var(--padding-section)*0.25);
+    /* esto hace que sea responsive: en este caso
+     si la lista no entra en la pantalla, esta se iria para abajo */
+    flex-wrap: wrap;
+}
+
+.gap-md {
+    gap: calc(var(--padding-section)*0.5);
+    flex-wrap: wrap;
+}
+
+.gap-lg {
+    gap: calc(var(--padding-section)*1);
+    flex-wrap: wrap;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.f-direction-column {
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .md\:f-direction-row {
+        flex-direction: row;
+    }
+}
