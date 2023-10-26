@@ -4,6 +4,8 @@
 @import './modules/list.css';
 @import './modules/nav.css';
 @import './modules/utils.css';
+@import './modules/cards.css';
+@import './modules/button.css';
 
 .body {
     /* color de fondo */

@@ -42,8 +42,20 @@
     flex-direction: column;
 }
 
+.g-elements {
+    display: grid;
+}
+
+.g-elements--responsive {
+    grid-template-columns: 100%;
+}
+
+
 @media (min-width: 768px) {
     .f-elements--responsive {
         flex-direction: row;
+    }
+    .g-elements--responsive {
+        grid-template-columns: 1fr 1fr;
     }
 }
