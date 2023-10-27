@@ -6,6 +6,7 @@
 @import './modules/utils.css';
 @import './modules/cards.css';
 @import './modules/button.css';
+@import './modules/animations.css';
 
 .body {
     /* color de fondo */
@@ -16,4 +17,8 @@
     font-family: var(--primary-font-family);
     /* espacio respecto al borde de la pagina */
     margin: 0;
+}
+
+.main {
+    overflow: hidden;
 }

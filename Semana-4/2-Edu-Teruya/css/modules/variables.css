@@ -19,3 +19,12 @@
     --padding-container: 1rem;
     --primary-border-radius: 0.5rem;
 }
+
+@media (min-width: 768px) {
+    :root {
+        --max-width-container: 1024px;
+        --padding-section: 2rem;
+        --padding-container: 0.75rem;
+        --primary-border-radius: 0.5rem; 
+    }
+}
