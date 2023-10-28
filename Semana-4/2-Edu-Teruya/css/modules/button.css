@@ -32,7 +32,6 @@
     background-color: transparent;
     border: 0.0625rem solid var(--primary-highlight-color);
     color: var(--reverse-primary-text-color);
-
 }
 
 .button--outline-primary:hover {
