@@ -1,0 +1,14 @@
+.header {
+    /* mantiene fijado el header mientras bajas el scroll */
+    position: fixed;
+    /* se pone al borde de arriba */
+    top: 0;
+    /* se pone al borde de la izquierda */
+    left: 0;
+    /* se ajusta el ancho al 100% de la vista de la pagina */
+    width: 100%;
+    /* sobrepone una capa */
+    z-index: 1;
+    background-color: var(--primary-theme-color);
+    box-shadow: 0 0 0.125rem 0.125rem var(--primary-shadow-color);
+}
