@@ -1,6 +1,14 @@
 @import '../../styles/scss/modules/header';
+@import '../../styles/scss/modules/mixins';
 @import '../../styles/scss/modules/nav';
 @import '../../styles/scss/modules/list';
 @import '../../styles/scss/modules/layout';
 @import '../../styles/scss/modules/utils';
 @import '../../styles/scss/modules/icons';
+
+
+
+// sass --watch .\src\styles\scss\fe.scsules\fe.css
+// para iniciar sass y se mantenga activo para las modificaciones y
+// luego se pone la direccion de la carpeta donde esta el fe.scss y luego
+// donde quieres q este el fe.css.

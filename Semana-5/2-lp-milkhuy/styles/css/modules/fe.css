@@ -9,8 +9,13 @@
 }
 
 .nav {
+  --padding-nav: 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+  transition: padding 0.25s;
+}
+.nav--scroll {
+  --padding-nav: 0.5rem;
 }
 .nav__logo {
   font-size: 1.75rem;
@@ -32,6 +37,20 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s;
+}
+@media (min-width: 768px) {
+  .list--header {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+.list--header-show {
+  opacity: 1;
+  pointer-events: auto;
 }
 .list__link {
   display: flex;
@@ -85,6 +104,14 @@
   align-items: center;
   justify-content: center;
 }
+.f-elements--responsive {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .f-elements--responsive {
+    flex-direction: row;
+  }
+}
 
 .gap-xs {
   gap: calc(var(--padding-section) * 0.25);
@@ -92,6 +119,10 @@
 
 .gap-sm {
   gap: calc(var(--padding-section) * 0.5);
+}
+
+.gap-md {
+  gap: var(--padding-section);
 }
 
 .min-h-100vh {
@@ -108,6 +139,17 @@
 
 .icon {
   font-size: 1.75rem;
+}
+@media (min-width: 768px) {
+  .icon--menu, .icon--close {
+    display: none;
+  }
+}
+.icon--close {
+  position: absolute;
+  top: calc(var(--padding-nav) + 0.25rem);
+  right: var(--padding-container);
+  transition: top 0.25ms;
 }
 
 /*# sourceMappingURL=fe.css.map */

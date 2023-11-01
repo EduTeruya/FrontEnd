@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/css/index.css">
     <link rel="stylesheet" href="./styles/css/modules/fe.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -24,8 +24,11 @@
                 <a href="#" class="nav__logo">
                     🍲
                 </a>
-                <i class="bi bi-list icon" id="icon-menu"></i>
-                <ul class="list list--header f-elements gap-sm" id="list-header">
+                <div class="icon icon--menu" id="icon-menu">
+                    <i class="bi bi-list"></i>
+                </div>
+                <ul class="list list--header f-elements f-elements--center f-elements--responsive gap-md"
+                    id="list-header">
                     <li>
                         <a href="#" class="list__link">Menu</a>
                     </li>
@@ -36,7 +39,7 @@
                         <a href="#" class="list__link">Contacto</a>
                     </li>
                     <li>
-                        <i class="bi bi-x-circle icon" id='icon-close'></i>
+                        <i class="bi bi-x-circle icon icon--close" id='icon-close'></i>
                     </li>
                 </ul>
             </div>
@@ -60,6 +63,8 @@
             </div>
         </article>
     </main>
+
+    <footer>Edu Teruya</footer>
 
     <script src="./js/index.js"></script>
 </body>
