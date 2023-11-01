@@ -22,6 +22,17 @@
   margin: 0;
   padding: 0;
 }
+.list--header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-theme-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
 .list__link {
   display: flex;
   background-color: var(--secondary-theme-color);
@@ -93,6 +104,10 @@
 
 .f-direction-column {
   flex-direction: column;
+}
+
+.icon {
+  font-size: 1.75rem;
 }
 
 /*# sourceMappingURL=fe.css.map */

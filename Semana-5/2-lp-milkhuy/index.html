@@ -7,14 +7,14 @@
     <title>MilkHuy</title>
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/css/index.css">
-    <link rel="stylesheet" href="./styles/css/fe.css">
-
+    <link rel="stylesheet" href="./styles/css/modules/fe.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
 
 <body class="body">
@@ -22,9 +22,10 @@
         <nav class="nav">
             <div class="container f-elements f-elements--header">
                 <a href="#" class="nav__logo">
-                    🍱
+                    🍲
                 </a>
-                <ul class="list f-elements gap-sm">
+                <i class="bi bi-list icon" id="icon-menu"></i>
+                <ul class="list list--header f-elements gap-sm" id="list-header">
                     <li>
                         <a href="#" class="list__link">Menu</a>
                     </li>
@@ -33,6 +34,9 @@
                     </li>
                     <li>
                         <a href="#" class="list__link">Contacto</a>
+                    </li>
+                    <li>
+                        <i class="bi bi-x-circle icon" id='icon-close'></i>
                     </li>
                 </ul>
             </div>
@@ -57,6 +61,7 @@
         </article>
     </main>
 
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
