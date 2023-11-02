@@ -12,29 +12,29 @@
 
 <body class="body bg-dark text-light">
     <main>
-        <section>
-            <div class="container">
-                <h1>Calculadora Bootstrap</h1>
-                <form>
+        <section class="py-5">
+            <div class="container d-flex flex-column gap-4">
+                <h1 class="text-info text-center m-0">Calculadora Bootstrap</h1>
+                <form class="d-flex flex-column gap-3" id="calculatorForm">
                     <div class="form-floating">
                         <input type="number" class="form-control bg-transparent text-light" id="number1"
-                            placeholder="name@example.com">
+                            placeholder="Numero 1" required>
                         <label for="numero1">Numero 1</label>
                     </div>
 
                     <div class="form-floating">
                         <select class="form-select bg-dark text-light" id="operator" aria-label="Operador de la Calculadora">
-                            <option selected>+</option>
+                            <option selected value="+">+</option>
                             <option value="-">-</option>
                             <option value="*">*</option>
                             <option value="/">/</option>
                         </select>
-                        <label for="floatingSelect">Works with selects</label>
-                    </div>
+                        <label class="selec" for="operator">Works with selects</label>
+                    </div>  
 
                     <div class="form-floating">
                         <input type="number" class="form-control bg-transparent text-light" id="number2"
-                            placeholder="Password">
+                            placeholder="Numero 2" required>
                         <label for="numero2">Numero 2</label>
                     </div>
                     <button class="btn btn-outline-light btn-lg w-100">Calcular</button>
@@ -43,6 +43,7 @@
         </section>
     </main>
 
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
