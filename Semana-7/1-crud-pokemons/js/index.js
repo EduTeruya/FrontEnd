@@ -37,6 +37,11 @@ const readPokemons = () => {
                     alt="${name}" class="img-fluid" style="max-width: 128px;" />
                 </td>
                 <td>
+                    <button class="btn btn-info"
+                    onClick="readPokemon(${index})"
+                    >
+                        ✏
+                    </button>
                     <button class="btn btn-danger"
                     onClick="deletePokemon(${index})"
                     >
@@ -48,10 +53,51 @@ const readPokemons = () => {
     });
 };
 
+const readPokemon = (index) => {
+    // const pokemon = pokemons.find((element, i) => {
+    //     return i === index;
+    // });
+    const pokemon = pokemons.slice(index, index + 1)[0];
+    console.log(pokemon);
+};
+
 const deletePokemon = (index) => {
-    pokemons.splice(index, 1);
-    localStorage.setItem(POKEMON_CRUD_DATA, JSON.stringify(pokemons));
-    readPokemons();
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: "btn btn-success mx-1",
+          cancelButton: "btn btn-danger mx-1"
+        },
+        buttonsStyling: true
+      });
+      swalWithBootstrapButtons.fire({
+        title: "Estas seguro?",
+        text: "No seras capas de revertir esto!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonText: "Si, eliminalo",
+        cancelButtonText: "No, cancelalo!",
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+            pokemons.splice(index, 1);
+            localStorage.setItem(POKEMON_CRUD_DATA, JSON.stringify(pokemons));
+            readPokemons();
+          swalWithBootstrapButtons.fire({
+            title: "Eliminado!",
+            text: "Tu registro ha sido eliminado.",
+            icon: "success"
+          });
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire({
+            title: "Cancelado",
+            text: "Tu registro esta seguro :)",
+            icon: "error"
+          });
+        }
+      });
 };
 
 const documentReady = () => {
