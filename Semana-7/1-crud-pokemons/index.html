@@ -14,15 +14,15 @@
     <title>CRUD Pokemon</title>
 </head>
 
-<body class="bg-dark text-light" style="min-height: 100vh;">
-    <header class="fixed-top bg-dark shadow py-2 ">
+<body class="bg-dark text-light d-flex flex-column" style="min-height: 100vh;">
+    <header class="fixed-top bg-dark shadow py-2">
         <div class="container">
             <h1 class="fs-2 text-center m-0">Pokemons CRUD</h1>
         </div>
     </header>
 
     <main class="overflow-hidden">
-        <section class="pt-5">
+        <section class="py-5">
             <div class="container">
                 <h2 class="fs-3 text-info text-center">Admin</h2>
                 <div class="row g-4">
@@ -40,24 +40,10 @@
                                         <th>Ataque</th>
                                         <th>Especial</th>
                                         <th>Imagen</th>
-                                        <!-- <th>Actions</th> -->
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Pikachu</td>
-                                        <td>Electrico</td>
-                                        <td>250</td>
-                                        <td>Trueno</td>
-                                        <td>Voltio</td>
-                                        <td>
-                                        <img src="https://images.wikidexcdn.net/mwuploads/wikidex/thumb/7/77/latest/20150621181250/Pikachu.png/800px-Pikachu.png" 
-                                        alt="picachu" class="img-fluid" style="max-width: 128px;">
-                                        </td>
-                                        <!-- <td>🗑 ✏</td> -->
-                                    </tr>
-                                </tbody>
+                                <tbody id="tBodyPokemons"></tbody>
                                 <tfoot>
                                     <tr>
                                         <td colspan="8" class="text-center fs-6">Hecho por Pikachu</td>
@@ -67,7 +53,7 @@
                         </div>
                     </section>
                     <section class="col-md-4">
-                        <form class="d-flex flex-column gap-3">
+                        <form class="d-flex flex-column gap-3" id="formPokemon">
                             <div class="form-floating">
                                 <input type="text" class="form-control bg-transparent text-light" id="name"
                                     placeholder="Nombre" required>
@@ -89,7 +75,7 @@
                                 <label for="attack">Ataque</label>
                             </div>
                             <div class="form-floating">
-                                <input type="text" class="form-control bg-transparent text-light" id="especial"
+                                <input type="text" class="form-control bg-transparent text-light" id="special"
                                     placeholder="Especial" required>
                                 <label for="special">Especial</label>
                             </div>
@@ -105,6 +91,11 @@
             </div>
         </section>
     </main>
+    <footer class="bg-dark shadow py-2 mt-auto">
+        <h6 class="text-center m-0">Desarrollado por Edu Teruya</h6>
+    </footer>
+
+    <script src="./js/index.js" defer></script>
 </body>
 
 </html>
