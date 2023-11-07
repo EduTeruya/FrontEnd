@@ -4,7 +4,6 @@ const POKEMON_CRUD_DATA = 'pokemons-crud';
 const pokemons = JSON.parse(localStorage.getItem(POKEMON_CRUD_DATA)) ?? [];
 
 const createPokemon = (e) => {
-    e.preventDefault();
     const documentFormPokemon = document.forms['formPokemon'];
     const name = documentFormPokemon.name.value;
     const type = documentFormPokemon.type.value;
@@ -37,12 +36,14 @@ const readPokemons = () => {
                     alt="${name}" class="img-fluid" style="max-width: 128px;" />
                 </td>
                 <td>
-                    <button class="btn btn-info"
+                    <button 
+                    class="btn btn-info m-1"
                     onClick="readPokemon(${index})"
                     >
                         ✏
                     </button>
-                    <button class="btn btn-danger"
+                    <button 
+                    class="btn btn-danger m-1"
                     onClick="deletePokemon(${index})"
                     >
                         🗑
@@ -54,11 +55,32 @@ const readPokemons = () => {
 };
 
 const readPokemon = (index) => {
-    // const pokemon = pokemons.find((element, i) => {
-    //     return i === index;
-    // });
+    const documentFormPokemon = document.forms['formPokemon'];
     const pokemon = pokemons.slice(index, index + 1)[0];
-    console.log(pokemon);
+    const { name, type, hp, attack, special, imgUrl } = pokemon;
+    documentFormPokemon.index.value = index;
+    documentFormPokemon.name.value = name;
+    documentFormPokemon.type.value = type;
+    documentFormPokemon.hp.value = hp;
+    documentFormPokemon.attack.value = attack;
+    documentFormPokemon.special.value = special;
+    documentFormPokemon.imgUrl.value = imgUrl;
+    document.getElementById('button').innerText = "Editar";
+};
+
+const updatePokemon = (index) => {
+    const documentFormPokemon = document.forms['formPokemon'];
+    const name = documentFormPokemon.name.value;
+    const type = documentFormPokemon.type.value;
+    const hp = documentFormPokemon.hp.value;
+    const attack = documentFormPokemon.attack.value;
+    const special = documentFormPokemon.special.value;
+    const imgUrl = documentFormPokemon.imgUrl.value;
+    pokemons.splice(index, 1, { name, type, hp, attack, special, imgUrl });
+    localStorage.setItem('POKEMONS_CRUD_DATA', JSON.stringify(pokemons));
+    documentFormPokemon.reset();
+    readPokemons();
+    document.getElementById('button').innerText = "Crear";
 };
 
 const deletePokemon = (index) => {
@@ -67,7 +89,7 @@ const deletePokemon = (index) => {
           confirmButton: "btn btn-success mx-1",
           cancelButton: "btn btn-danger mx-1"
         },
-        buttonsStyling: true
+        buttonsStyling: false
       });
       swalWithBootstrapButtons.fire({
         title: "Estas seguro?",
@@ -103,8 +125,18 @@ const deletePokemon = (index) => {
 const documentReady = () => {
     const formPokemon = document.getElementById('formPokemon');
 
+    const submitPokemon = (e) => {
+      e.preventDefault();
+      const  index = document.getElementById('index').value;
+      if (index === '') {
+        createPokemon();
+      } else {
+        updatePokemon(index);
+      }
+    };
+
     readPokemons();
-    formPokemon.addEventListener('submit', createPokemon);
+    formPokemon.addEventListener('submit', submitPokemon);
 };
 
 document.addEventListener('DOMContentLoaded', documentReady);
