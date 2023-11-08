@@ -1,0 +1,10 @@
+@import './modules/variables.css';
+
+.body {
+  background-color: var(--primary-theme-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+  margin: 0;
+  min-height: 150vh;
+  transition: background-color 0.25s, color 0.25s;
+}
