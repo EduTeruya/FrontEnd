@@ -1,7 +1,10 @@
 'use strict';
 
+import foods from "./modules/foods.js";
+
 const documentReady = () => {
-    alert('hola!!!');
+    foods();
+    comidas();
 
 };
 
