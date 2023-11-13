@@ -1,3 +1,74 @@
+@charset "UTF-8";
+.header {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 
+.nav {
+  --padding-nav: 1.5rem;
+  padding-top: var(--padding-nav);
+  padding-bottom: var(--padding-nav);
+}
+.nav__logo {
+  display: block;
+  background-color: var(--secondary-theme-color);
+  box-shadow: 0 0 0.125rem 0 var(--primary-highlight-color);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  transition: background-color 0.25s;
+}
+
+.container {
+  max-width: var(--max-width-container);
+  margin: 0;
+  padding-left: var(--padding-container);
+  padding-right: var(--padding-container);
+}
+
+.f-elements {
+  display: flex;
+}
+.f-elements--header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-theme {
+  position: relative; /* Define la posición del elemento como relativa con respecto a su posición normal. */
+  display: block; /* Define el elemento como un bloque, ocupando todo el ancho disponible. */
+  background-color: var(--secondary-theme-color); /* Establece el color de fondo utilizando una variable CSS personalizada. */
+  border: 0.0625rem solid var(--secondary-theme-color); /* Establece un borde sólido con un grosor y color personalizados. */
+  box-shadow: 0 0 0.125rem 0 var(--primary-shadow-color); /* Agrega una sombra al botón. */
+  border-radius: var(--primary-border-radius); /* Establece un radio de borde personalizado (es decir, redondea las esquinas). */
+  color: var(--primary-text-color); /* Define el color del texto utilizando una variable CSS personalizada. */
+  font-family: var(--primary-font-family); /* Establece la fuente del texto utilizando una variable CSS personalizada. */
+  font-size: 0.875rem; /* Establece el tamaño de fuente en 0.875 rem (unidades relativas). */
+  font-weight: 600; /* Establece el grosor de la fuente en 600 (generalmente se usa para la negrita). */
+  padding: 0.125em 0.5em; /* Establece el relleno del botón (espacio dentro del botón). */
+  text-decoration: none; /* Elimina cualquier decoración de texto, como subrayados. */
+  cursor: pointer; /* Cambia el cursor a la forma de una mano para indicar que es un elemento interactivo. */
+  transition: background-color 0.25s, border 0.25s, box-shadow 0.25s, color 0.25s;
+  transition: left 0.25s, background-color 0.25s, box-shadow 0.25s;
+}
+.button-theme::after { /* Define un pseudo-elemento (::after) que se agregará después del contenido del botón. */
+  content: ""; /* Define el contenido del pseudo-elemento como una cadena vacía. */
+  position: absolute; /* Establece la posición del pseudo-elemento como absoluta. */
+  top: 50%; /* Lo coloca en la mitad superior del botón. */
+  left: 0; /* Lo coloca en la parte izquierda del botón. */
+  width: 1.5rem; /* Establece el ancho del pseudo-elemento. */
+  height: 1.5rem; /* Establece la altura del pseudo-elemento. */
+  background-color: var(--primary-theme-color); /* Establece el color de fondo del pseudo-elemento. */
+  box-shadow: 0 0 0 0.0625rem var(--primary-shadow-color), 0 0 0 0.125rem var(--primary-shadow-color); /* Agrega sombras al pseudo-elemento. */
+  border-radius: 50%; /* Redondea el pseudo-elemento para que parezca un círculo. */
+  transform: translate(0, -50%); /* Desplaza el pseudo-elemento hacia arriba para centrarlo verticalmente. */
+}
+.button-theme--active::after {
+  left: 50%;
+}
 
 /*# sourceMappingURL=fe.css.map */

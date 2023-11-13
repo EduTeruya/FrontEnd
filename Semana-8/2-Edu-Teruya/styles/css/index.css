@@ -3,7 +3,18 @@
 .body {
     background-color: var(--primary-theme-color);
     color: var(--primary-text-color);
-    font-family: (--primary-font-family);
+    font-family: var(--primary-font-family);
     margin: 0;
     min-height: 150vh;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.body--light {
+    --primary-theme-color: #fff;
+    --secondary-theme-color: #eee;
+    --primary-text-color: #000;
+    --secondary-text-color: #666;
+    --reverse-primary-text-color: #666;
+    --primary-shadow-color: #00000080;
+    --secondary-shadow-color: #00000040;
 }
