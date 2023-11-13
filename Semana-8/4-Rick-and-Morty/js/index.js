@@ -1,9 +1,11 @@
 'use strict';
 
+import header from "./modules/header.js";
 import characters from "./modules/characters.js";
 
 const documentReady = () => {
-    characters();
+  header();
+  characters();
 };
 
-document.addEventListener('DOMContentLoaded',documentReady);
+document.addEventListener('DOMContentLoaded', documentReady);
