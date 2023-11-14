@@ -1,9 +1,10 @@
 
 import './App.css';
+import Header from './components/sections/Header';
 
 function App() {
   return (
-    <h1>Patita Feliz</h1>
+    <Header />
   );
 }
 
