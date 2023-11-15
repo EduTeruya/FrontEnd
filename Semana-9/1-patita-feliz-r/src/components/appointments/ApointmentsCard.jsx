@@ -17,7 +17,7 @@ const AppointmentsCard = ({ index, appointment, appointments, setAppointments })
         <small><span className="fw-bold">Propietario:</span> {propietario}</small>
         <div className="d-flex gap-1">
           <a
-            href={`https://api.whatsapp.com/send?phone=51963640765&text=Confirmo cita: Mascota: ${mascota}, Propietario: ${propietario}, Fecha: ${fecha}, Hora: ${hora} Síntomas: ${sintomas}`}
+            href={`https://api.whatsapp.com/send?phone=51963640765&text=Confirmo cita: Mascota: ${mascota}, Propietario: ${propietario}, Fecha: ${fecha}, Hora: ${hora}, Síntomas: ${sintomas}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary btn-sm"

@@ -73,11 +73,11 @@ const AppointmentsForm = ({ appointments, setAppointments }) => {
           <input
             type="text"
             className="form-control bg-transparent text-light"
-            id="síntomas"
+            id="sintomas"
             placeholder="Síntomas"
             onInput={handleInput}
           />
-          <label htmlFor="síntomas">Síntomas</label>
+          <label htmlFor="sintomas">Síntomas</label>
         </div>
         <button className="btn btn-info w-100 fw-bold">Crear</button>
       </form>
