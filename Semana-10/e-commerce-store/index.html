@@ -1,16 +1,104 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="/favicon-16x16.png" type="image/png">
-    <link rel="shortcut icon" href="/favicon-32x32.png" type="image/png">
-    <title>E-Commerce Store</title>
-  </head>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>E-Commerce Store</title>
+
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" sizes="180x180" />
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    :root {
+      scroll-behavior: smooth;
+      --dark-primary-text-color: #fff;
+      --light-primary-text-color: #000;
+      --light-primary-shadow-color: #00000080;
+      --light-secondary-shadow-color: #00000040;
+      --primary-hightlight-color: #61dafb;
+      --secondary-hightlight-color: #gold;
+      --primary-button-color: #61dafb;
+      --secondary-button-color: #gold;
+      --primary-font-family: 'Montserrat', sans-serif;
+      --container-max-width: 512px;
+      --container-padding: 1rem;
+      --section-padding: 1.5rem;
+      --primary-border-radius: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+      :root {
+        --container-max-width: 1024px;
+        --container-padding: 0.75rem;
+        --section-padding: 2rem;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-theme-color: #20232a;
+        --secondary-theme-color: #282c34;
+        --primary-text-color: #fff;
+        --secondary-text-color: #888;
+        --primary-shadow-color: #ffffff80;
+        --secondary-shadow-color: #ffffff40;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --primary-theme-color: #fff;
+        --secondary-theme-color: #000;
+        --primary-text-color: #20232a;
+        --secondary-text-color: #777;
+        --primary-shadow-color: #00000080;
+        --secondary-shadow-color: #00000040;
+      }
+    }
+
+    :root.dark {
+      --primary-theme-color: #20232a;
+      --secondary-theme-color: #282c34;
+      --primary-text-color: #fff;
+      --secondary-text-color: #888;
+      --primary-shadow-color: #ffffff80;
+      --secondary-shadow-color: #ffffff40;
+    }
+
+    :root.light {
+      --primary-theme-color: #fff;
+      --secondary-theme-color: #000;
+      --primary-text-color: #20232a;
+      --secondary-text-color: #777;
+      --primary-shadow-color: #00000080;
+      --secondary-shadow-color: #00000040;
+    }
+
+    .body {
+      background-color: var(--primary-theme-color);
+      color: var(--primary-text-color);
+      font-family: var(--primary-font-family);
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body class="body">
+
+
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
