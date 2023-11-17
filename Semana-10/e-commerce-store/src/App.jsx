@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+import Header from './components/sections/Header.jsx';
 
 import "./App.css"
 
 function App() {
   return (
-    <h1>Store Ga</h1>
+    <>
+      <Header />
+    </>
   )
 }
 
