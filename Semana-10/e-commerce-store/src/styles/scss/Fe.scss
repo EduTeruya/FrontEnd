@@ -1,4 +1,7 @@
+@import './modules/mixins/mixins';
+@import './modules/layouts/container';
+@import './modules/layouts/elements';
 @import './modules/components/header';
 @import './modules/components/nav';
-@import './modules/layouts/container.scss';
-@import './modules/layouts/elements.scss';
+@import './modules/components/modals';
+@import './modules/components/list';

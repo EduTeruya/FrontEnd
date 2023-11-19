@@ -1,0 +1,16 @@
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &--header {
+        @include f-elements(column, center, center, calc(var(--section-padding)* 0.75));
+        background-image: linear-gradient(to bottom, var(--light-primary-shadow-color), var(--light-secondary-shadow-color));
+    background-color: #fff8;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    transform: translate(var(--translate-modal));
+    transition: 0.25s;
+    }
+}

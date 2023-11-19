@@ -27,8 +27,7 @@ const Header = () => {
                             <option value="value2">☀</option>
                             <option value="value3">💻</option>
                         </select>
-                        <button className='icon'
-                        >
+                        <button className='icon'>
                             🍔
                         </button>
                     </div>
