@@ -1,6 +1,7 @@
+import { useRef } from 'react';
+import { BsList, BsXCircle } from 'react-icons/bs';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/img/logo.webp';
-import { useRef } from 'react';
 
 const Header = () => {
 
@@ -8,12 +9,12 @@ const Header = () => {
     const modal = useRef();
 
     const showMenu = () => {
-        header.current.classList.add('header--menu');
+        header.current.classList.add('header--move');
         modal.current.classList.add('modal--show');
     };
 
     const hideMenu = () => {
-        header.current.classList.remove('header--menu');
+        header.current.classList.remove('header--move');
         modal.current.classList.remove('modal--show');
     };
 
@@ -41,7 +42,7 @@ const Header = () => {
                                 to="/productos"
                                 className={({ isActive }) => isActive ? "list__link list__link--active" : "list__link"}
                                 onClick={hideMenu}
-                            
+
                             >Productos
                             </NavLink>
                             </li>
@@ -76,7 +77,7 @@ const Header = () => {
                                 className='icon icon--close'
                                 onClick={hideMenu}
                             >
-                                ❌
+                                <BsXCircle />
                             </li>
                         </ul>
                     </div>
@@ -86,10 +87,11 @@ const Header = () => {
                             <option value="value2">🌞</option>
                             <option value="value3">💻</option>
                         </select> */}
-                        <button className='icon'
+                        <button
+                            className='icon icon--menu'
                             onClick={showMenu}
                         >
-                            🍔
+                            <BsList />
                         </button>
                     </div>
                 </div>

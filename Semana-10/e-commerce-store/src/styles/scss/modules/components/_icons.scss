@@ -2,7 +2,8 @@
     display: flex;
     background-color: transparent;
     border: 0;
-    font-size: 1.75rem;
+    color: var(--primary-text-color);
+    font-size: 2rem;
     padding: 0;
     filter: contrast(0.75);
     cursor: pointer;
@@ -16,5 +17,12 @@
         position: absolute;
         top: var(--padding-nav);
         right: var(--container-padding);
+    }
+
+    &--close,
+    &--menu {
+        @include desktop {
+            display: none;
+        }
     }
 }

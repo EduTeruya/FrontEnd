@@ -11,6 +11,12 @@
         margin-left: auto;
         transform: translate(var(--translate-modal));
         transition: 0.25s;
+
+        @include desktop {
+            flex-direction: row;
+            background-color: none;
+            width: auto;
+        }
     }
 
     &__link {
